@@ -46,7 +46,7 @@ def oauth_logout(request):
     try:
      token_object = AccessToken.objects.get(token=str(access_token))
     except AccessToken.DoesNotExist:
-           print("error c do not ")
+           print("error token dosent exist ")
    
     user = token_object.user
     access_token = AccessToken.objects.filter(user=user)
